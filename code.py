@@ -76,7 +76,7 @@ best_country = data_1.loc[data_1['Total_Points'].idxmax(),'Country_Name']
 # --------------
 #Code starts here
 best = data[data['Country_Name']==best_country]
-best.reset_index(inplace=True)
+best.reset_index(drop=True,inplace=True)
 best = best[['Gold_Total','Silver_Total','Bronze_Total']]
 best.plot.bar(stacked=True)
 plt.xlabel('United States')
